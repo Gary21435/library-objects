@@ -12,25 +12,64 @@
 }
 
 .book-container {
-    grid-column: 1 / 7;
-    background-color: blue;
+    grid-column: 1 / 8;
+    background-color: rgb(85, 85, 162);
+    padding-top: 15px;
 
     display: grid;
-    /* grid-template: ; */
+    grid-template: auto / repeat(3, 1fr);
+    justify-items: center;
 }
 
 .form-container {
-    grid-column: 7 / 10;
-    background-color: red;
+    grid-column: 8 / 11;
+    background-color: rgb(184, 106, 106);
 }
 
 .book-card {
-    border: 2px solid rgb(84, 139, 139);
-    box-shadow: 2px 3px 5px 0px blue;
-    background-color: rgb(157, 195, 182);
+    /* border: 0px solid rgb(5, 94, 94); */
+    box-shadow: 2px 2px 5px 0px rgb(49, 15, 15);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .book-card p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.903);
+}
+
+button {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(90, 146, 40);
+    padding: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+#submit {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(22, 177, 157);
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+form {
+    padding-left: 20px;
 }

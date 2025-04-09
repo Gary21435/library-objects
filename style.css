@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template: 1fr / repeat(10, 1fr);
+}
+
+.book-container {
+    grid-column: 1 / 7;
+    background-color: blue;
+
+    display: grid;
+    /* grid-template: ; */
+}
+
+.form-container {
+    grid-column: 7 / 10;
+    background-color: red;
+}
+
+.book-card {
+    border: 2px solid rgb(84, 139, 139);
+    box-shadow: 2px 3px 5px 0px blue;
+    background-color: rgb(157, 195, 182);
+}
+
+.book-card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}

@@ -4,21 +4,23 @@
 }
 
 .content {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     display: grid;
-    grid-template: 1fr / repeat(10, 1fr);
+    grid-template: auto / repeat(10, 1fr);
 }
 
 .book-container {
     grid-column: 1 / 8;
     background-color: rgb(85, 85, 162);
     padding-top: 15px;
+    padding-bottom: 15px;
 
     display: grid;
-    grid-template: auto / repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    row-gap: 12px;
 }
 
 .form-container {
@@ -36,6 +38,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content: space-between;
 }
 
 .book-card p {
@@ -55,6 +58,7 @@ button {
     border: 2px solid transparent;
     border-radius: 10px;
     margin: 30px;
+    cursor: pointer;
 }
 
 #submit {
@@ -72,4 +76,54 @@ button {
 
 form {
     padding-left: 20px;
+}
+
+a>img {
+    width: 15px;
+    height: 15px;
+
+}
+
+.card-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.book-card:hover #delete, 
+.book-card:hover #edit {
+    opacity: 1;
+}
+
+.card-action a{
+    opacity: 0;
+    transition: opacity .25s;
+    cursor: pointer;
+}
+
+.edit-card-form, #create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-card-form>*, #create-form>* {
+    margin-right: 10px;
+    border: none;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.edit-card-form>label, #create-form>label {
+    padding: 0;
+    margin-top: 3px;
+}
+
+#submit-edit, #submit {
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
 }

@@ -100,6 +100,7 @@ function handleNewBook() {
     `;
 
     form.removeChild(newBookButton);
+    
     form_container.appendChild(new_form);
 }
 
@@ -138,6 +139,9 @@ document.addEventListener("click", (e) => {
                 form_container.removeChild(toRemove);
                 toRemove.remove();
             }
+            let toRemove;
+            if((toRemove = form_container.querySelector('#create-form')))
+                toRemove.remove();
             const new_form = document.createElement("form");
             new_form.id = "new-form";
             new_form.setAttribute("action", "#");
